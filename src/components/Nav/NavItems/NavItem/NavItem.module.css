@@ -1,0 +1,51 @@
+.NavItem {
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+
+.NavItem a {
+    color: #000000;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    padding: 3px 10px 8px 10px;
+}
+
+.NavItem a:hover,
+.NavItem a:active,
+.NavItem a.active {
+    color: #e6e6e6;
+}
+
+@media (min-width: 500px) {
+    .NavItem {
+        margin: 0;
+        display: flex;
+        height: 100%;
+        width: auto;
+        align-items: center;
+    }
+    
+    .NavItem a {
+        color: rgb(0, 0, 0);
+        height: 100%;    
+        border-bottom: 4px solid transparent;
+    }
+    
+    .NavItem a:hover,
+    .NavItem a:active,
+    .NavItem a.active {
+        background-color: white;
+        border-bottom: 4px solid #e6e6e6;
+        color: #888888;
+    }
+}
+
+@media (min-width: 1143px) {
+    .NavItem a {
+        padding: 16px 10px;
+    }
+}

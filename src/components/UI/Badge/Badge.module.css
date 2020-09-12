@@ -1,0 +1,11 @@
+.Badge {
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    background: #afe5ef;
+    border-radius: 3px;
+    letter-spacing: 0.1em;
+}

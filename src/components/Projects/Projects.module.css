@@ -1,0 +1,44 @@
+.PageWrapper {
+    width: 100%;
+}
+
+.PageWrapper h1 {
+    padding: 0px;
+    margin: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.Projects {
+    min-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 375px));
+    grid-template-rows: auto;
+    align-content: start;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.SearchDiv {
+    margin: 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1143px) {
+
+}
+
+@media only screen and (max-width: 499px) {
+
+
+    .PageWrapper h1 {
+        font-size: 1.5em;
+    }
+
+    .Projects {
+        display: block;
+    }
+}

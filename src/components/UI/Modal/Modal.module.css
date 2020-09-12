@@ -1,0 +1,87 @@
+.Modal {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 90%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.Close {
+    z-index: 900;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    position: absolute;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.Close:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.ImageContainer {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.TextContainer {
+    max-width: 100%;
+}
+
+.TextContainer h1 {
+    max-width: 100%;
+    margin: 20px 0px 10px 0px;
+}
+
+.TextContainer pre {
+    white-space: pre-wrap;
+    word-wrap: normal;
+}
+
+.TextBold {
+    font-weight: bold;
+}
+
+.Badges {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Tags {
+    padding-top: 3px;
+}
+
+
+@media (min-width: 500px) {
+    .InlineSpan {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 600px) {
+    .Modal {
+        width: 550px;
+        left: calc(50% - 275px);
+    }
+}
+
+@media (min-width: 1025px) {
+    .Modal {
+        width: 800px;
+        left: calc(50% - 400px);
+    }
+}

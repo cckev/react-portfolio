@@ -1,0 +1,11 @@
+.Content {
+    /* background: linear-gradient(to right, #8e9eab, #eef2f3); */
+    padding: 56px 0px 0px 0px;
+    min-height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}

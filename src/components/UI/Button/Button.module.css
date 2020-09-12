@@ -1,0 +1,26 @@
+.Button {
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 4px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background: #ffa3c7;
+    transition: all 200ms ease;
+    border-radius: 8px;
+    appearance: none;
+    position: relative;
+    outline: none;
+    font-family: 'Haas Grot Text R Web', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    height: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.Button a {
+    text-decoration: none;
+    color: white;
+}

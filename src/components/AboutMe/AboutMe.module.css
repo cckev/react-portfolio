@@ -1,0 +1,50 @@
+.PageWrapper {
+    width: 100%;
+}
+
+.PageTitle {
+    height: auto;
+    width: 100%;
+}
+
+.PageTitle h1 {
+    padding: 0px;
+    margin: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.AboutMe {
+    width: 100%;
+}
+
+.Pic {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0em 0em 0em;
+}
+
+
+.ProfilePic {
+    border-radius: 3%
+}
+
+.Bio {
+    padding-top: 1em;
+    width: 70%;
+    display: flex-row;
+    justify-content: center;
+    margin: auto;
+}
+
+.Bio p {
+    width: 100%;
+}
+
+@media (max-width: 499px) {
+    .Bio {
+        width: 70%;
+    }
+  }
