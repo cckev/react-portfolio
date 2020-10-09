@@ -18,7 +18,7 @@ export function* fetchProjectsAsync() {
     }
 }
 
-export function* fetchProjectsStart() {
+export function* watchFetchProjectsStart() {
     yield takeLatest(
         ProjectsActionTypes.FETCH_PROJECTS_START,
         fetchProjectsAsync
@@ -26,5 +26,5 @@ export function* fetchProjectsStart() {
 }
 
 export function* projectsSagas() {
-    yield all([call(fetchProjectsStart)]);
+    yield all([call(watchFetchProjectsStart)]);
 }

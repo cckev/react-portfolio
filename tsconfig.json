@@ -19,7 +19,7 @@
     "noEmit": true,
     "jsx": "react",
     "typeRoots": [
-      "./types",
+      "./src/types",
       "./node_modules/@types"
     ]
   },

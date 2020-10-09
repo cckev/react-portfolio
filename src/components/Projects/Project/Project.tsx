@@ -2,7 +2,7 @@ import React from 'react';
 
 import Card from '../../UI/Card/Card';
 import styles from './Project.module.css';
-import { ProjectInfo } from './../../../types/global.d';
+import { ProjectInfo } from '../../../types/global';
 
 interface Props extends ProjectInfo {
     projectID: string;
@@ -34,7 +34,6 @@ const Project: React.FC<Props> = props => {
                 toggleProjectClicked={toggleProjectClicked}
             />
         </div>
-
     );
 }
 

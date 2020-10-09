@@ -2,14 +2,15 @@ import React, { useState, useEffect, Dispatch } from 'react';
 import styles from './Projects.module.css';
 
 import Project from './Project/Project';
-
-import { ProjectsState } from './../../types/global.d';
-import { useHistory } from 'react-router-dom';
 import Stage from './Stage/Stage';
+import SearchBar from '../Nav/SearchBar/SearchBar';
+
+import { ProjectInfo, ProjectsState } from '../../types/global';
+import { useHistory } from 'react-router-dom';
 import { customEncodeURI } from '../../firebase/firebase.utils';
 import { fetchProjectsStart } from '../../store/actions/projects';
 import { connect } from 'react-redux';
-import SearchBar from '../Nav/SearchBar/SearchBar';
+
 
 //// The following imports needed for programatically uploading to firebase
 // import { addCollectionAndDocuments } from '../../firebase/firebase.utils';
@@ -17,16 +18,14 @@ import SearchBar from '../Nav/SearchBar/SearchBar';
 
 
 interface Props {
-    projectsState: ProjectsState;
+    filteredProjects: { [name: string]: ProjectInfo };
     fetchProjectsStart: () => void;
 }
 
-
 const Projects: React.FC<Props> = props => {
-    const { projectsState, fetchProjectsStart } = props;
+    const { filteredProjects, fetchProjectsStart } = props;
     const [projectClicked, setProjectClicked] = useState(false);
     const [projectID, setProjectID] = useState("");
-    const projects = projectsState.filteredProjects;
     const history = useHistory();
 
     // Utility function for uploading course data to firebase
@@ -52,9 +51,9 @@ const Projects: React.FC<Props> = props => {
     }
 
     let projectsArray: JSX.Element[] = [];
-    if (projects) {
-        Object.keys(projects).forEach(key => {
-            let p = projects[key]
+    if (filteredProjects) {
+        Object.keys(filteredProjects).forEach(key => {
+            let p = filteredProjects[key]
             projectsArray.push(
                 <Project
                     title={p.title}
@@ -81,7 +80,7 @@ const Projects: React.FC<Props> = props => {
             {
                 projectClicked ?
                     <Stage
-                        projectInfo={projects[projectID]}
+                        projectInfo={filteredProjects[projectID]}
                         toggleStage={toggleStage}
                     />
                     : null
@@ -94,7 +93,7 @@ const Projects: React.FC<Props> = props => {
 }
 
 const mapStateToProps = (state: ProjectsState) => ({
-    projectsState: state
+    filteredProjects: state.filteredProjects
 })
 
 const mapDispatchToProps = (dispatch: Dispatch<{ type: string }>) => ({

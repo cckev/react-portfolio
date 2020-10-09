@@ -14,6 +14,7 @@ import createSagaMiddleware from 'redux-saga';
 //configureProjectsStore();
 
 const sagaMiddleware = createSagaMiddleware();
+
 const store = createStore(
   projectsReducer,
   applyMiddleware(sagaMiddleware)

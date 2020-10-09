@@ -2,7 +2,7 @@ import React from 'react';
 import Projects from './components/Projects/Projects';
 import AboutMe from './components/AboutMe/AboutMe';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
-import Layout from './hoc/Layout/Layout';
+import Layout from './components/UI/Layout/Layout';
 
 interface Props {
 

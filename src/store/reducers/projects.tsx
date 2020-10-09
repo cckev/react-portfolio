@@ -16,7 +16,6 @@ const projectContains = (p: ProjectInfo, searchText: string) => {
         p.tags.join(" ").includes(searchText.toLowerCase())
     )
         return true;
-
     return false;
 }
 

@@ -6,7 +6,6 @@
 export interface ProjectInfo {
     title: string,
     shortDesc: string,
-    longDesc?: string,
     smallImgURL: string,
     largeImgURL: string,
     githubLink: string,
@@ -38,3 +37,6 @@ export type ProjectsState = {
 export type AppState = {
     projects: ProjectsState;
 };
+
+
+declare module "*.md";
